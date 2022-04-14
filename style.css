@@ -1,0 +1,96 @@
+body
+{
+    background-color: #34445e;
+}
+
+.frame
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: #34495e;
+    margin-left: -200px;
+    margin-top: -200px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.317);
+    overflow: hidden;
+}
+
+.cradle
+{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 140px;
+    left: 100px;
+    padding-top: 100px;
+}
+
+.cradle::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 6px;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background-color: aqua;
+}
+
+.cradle .ball
+{
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);
+    transform-origin: 50% -100px;
+    border-radius: 50%;
+    box-shadow: 1px 5px 27px 3px #00008b38;
+}
+
+.cradle .ball::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 1px;
+    background-color: aqua;
+    top: -100px;
+    left: 20px;
+}
+
+.cradle .ball-1
+{
+    animation: ball-1 1s ease-out infinite alternate;
+}
+
+.cradle .ball-5
+{
+    animation: ball-5 1s ease-out 1s infinite alternate;
+}
+
+@keyframes ball-1 {
+    0%,
+    50% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes ball-5 {
+    0%,
+    50% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
